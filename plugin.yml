@@ -1,5 +1,5 @@
 name: SaesPvP
-version: 0.0.1
+version: 1.0.0
 main: com.saesdev.saespvp.SaesPvP
 commands:
    ninja:
