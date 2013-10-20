@@ -1,0 +1,19 @@
+name: SaesPvP
+version: 0.0.1
+main: com.saesdev.saespvp.SaesPvP
+commands:
+   ninja:
+      description: Use the Ninja kit!
+      usage: /<command>
+   archer:
+      description: Use the Archer kit!
+      usage: /<command>
+   default:
+      description: Use the Default kit!
+      usage: /<command>
+   reset:
+      description: Reset someone's kits.
+      usage: /<command> [player]
+   ender:
+      description: Use the Ender kit!
+      usage: /<command>
