@@ -26,6 +26,7 @@ getCommand("reset").setExecutor(new Reset());
 getCommand("ninja").setExecutor(new Ninja());
 getCommand("default").setExecutor(new Default());
 getCommand("archer").setExecutor(new Archer());
+getServer().getPluginManager().registerEvents(this, this);
 	}
 	public void onDisable() {
 		System.out.println("[SaesPvP] Disabled");
@@ -100,16 +101,19 @@ getCommand("archer").setExecutor(new Archer());
       }
               
       }
+	
 	@EventHandler
-	public void onPlayerSoup(PlayerInteractEvent event) {
+	public void OnPlayerSoup(PlayerInteractEvent event) { 
 		Player player = event.getPlayer();
-		int soup = 7;
-		if(((event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK)) && (player.getItemInHand().getType() == Material.MUSHROOM_SOUP)) {
-			player.setHealth(player.getHealth() + soup > player.getMaxHealth() ? player.getMaxHealth() : player.getHealth() + soup);
-	        event.getPlayer().getItemInHand().setType(Material.BOWL);
-		}
-	}
+    {
+      int soup = 7;
+      if (((event.getAction() == Action.RIGHT_CLICK_AIR) || (event.getAction() == Action.RIGHT_CLICK_BLOCK)) && (player.getItemInHand().getType() == Material.MUSHROOM_SOUP)) {
+        player.setHealth(player.getHealth() + soup > player.getMaxHealth() ? player.getMaxHealth() : player.getHealth() + soup);
+        event.getPlayer().getItemInHand().setType(Material.BOWL);
+      }
+    } 
+    }
 
-
+	
 	
 }
