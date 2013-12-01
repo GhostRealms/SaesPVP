@@ -24,10 +24,10 @@ public class Ninja implements CommandExecutor {
 	    	  
 	    	  
 	      
-	        if (!this.kit.contains(player.getName())) {
+	        if (!SaesPvP.kit.contains(player.getName())) {
 	        	
 	          player.sendMessage(ChatColor.YELLOW + "You chose the " + ChatColor.BOLD + "Ninja " + ChatColor.YELLOW + "kit");
-	          this.kit.add(player.getName());
+	          SaesPvP.kit.add(player.getName());
 	          player.getInventory().clear();
 	          ItemStack NSword = new ItemStack(Material.GOLD_SWORD);
 	          NSword.addEnchantment(Enchantment.DAMAGE_ALL, 2);
@@ -49,4 +49,6 @@ public class Ninja implements CommandExecutor {
 
 	
 }
+	
+
 }

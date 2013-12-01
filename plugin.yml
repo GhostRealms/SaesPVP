@@ -1,5 +1,5 @@
 name: SaesPvP
-version: 1.0.0
+version: 1.3.1
 main: com.saesdev.saespvp.SaesPvP
 commands:
    ninja:
@@ -14,6 +14,9 @@ commands:
    reset:
       description: Reset someone's kits.
       usage: /<command> [player]
-   ender:
-      description: Use the Ender kit!
+   heavy:
+      description: Use the Heavy kit!
+      usage: /<command>
+   pyro:
+      description: Use the Pyro kit!
       usage: /<command>

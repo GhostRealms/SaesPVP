@@ -1,5 +1,7 @@
 package com.saesdev.saespvp;
 
+import java.util.ArrayList;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -10,6 +12,9 @@ import org.bukkit.potion.PotionEffect;
 
 public class Reset implements CommandExecutor {
 
+	ArrayList<String> kit = new ArrayList<String>();
+
+	
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 	Player player = (Player)sender;
 		if (commandLabel.equalsIgnoreCase("reset"))
@@ -24,6 +29,7 @@ public class Reset implements CommandExecutor {
     		player.getInventory().clear();
     	    for (PotionEffect effect : player.getActivePotionEffects())
     	        player.removePotionEffect(effect.getType());
+    	    SaesPvP.kit.remove(player.getName());
           }
           else if (args.length == 1) {
         	  Player target = Bukkit.getServer().getPlayer(args[0]);
@@ -33,6 +39,7 @@ public class Reset implements CommandExecutor {
 	    		target.getInventory().setLeggings(null);
 	    		target.getInventory().setBoots(null);
 	    		target.getInventory().clear();
+	    		SaesPvP.kit.remove(player.getName());
 	    	    for (PotionEffect effect : target.getActivePotionEffects())
 	    	        target.removePotionEffect(effect.getType());
             } else {

@@ -24,10 +24,10 @@ public class Pyro implements CommandExecutor {
 		    	  
 		    	  
 		      
-		        if (!this.kit.contains(player.getName())) {
+		        if (!SaesPvP.kit.contains(player.getName())) {
 		        	
 		          player.sendMessage(ChatColor.YELLOW + "You chose the " + ChatColor.BOLD + "Pyro " + ChatColor.YELLOW + "kit");
-		          this.kit.add(player.getName());
+		          SaesPvP.kit.add(player.getName());
 		          player.getInventory().clear();
 		          ItemStack PBow = new ItemStack(Material.BOW);
 		          PBow.addEnchantment(Enchantment.ARROW_FIRE, 1);
@@ -37,7 +37,7 @@ public class Pyro implements CommandExecutor {
 		          player.getInventory().addItem(new ItemStack[] { new ItemStack(Material.WOOD_SWORD) });
 		          player.getInventory().addItem(new ItemStack[] { PBow });
 		          player.getInventory().addItem(new ItemStack[] { new ItemStack(Material.ARROW) });
-		          player.getInventory().addItem(new ItemStack[] { new ItemStack(Material.FIREBALL, 5) });
+		          player.getInventory().addItem(new ItemStack[] { new ItemStack(Material.FLINT_AND_STEEL) });
 		          for (int i = 0; i < 32; i++) {
 		            player.getInventory().addItem(new ItemStack[] { new ItemStack(Material.MUSHROOM_SOUP) });
 		            player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 2147483647, 1));
@@ -53,5 +53,5 @@ public class Pyro implements CommandExecutor {
 
 		
 	}
+	
 }
-

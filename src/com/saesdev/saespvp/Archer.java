@@ -20,13 +20,13 @@ public class Archer implements CommandExecutor{
     Player player = (Player)sender;	
     
 	      if (player.hasPermission("SaesPvP.Archer")) {
-	        if (!this.kit.contains(player.getName())) {
+	        if (!SaesPvP.kit.contains(player.getName())) {
 	          ItemStack ABow = new ItemStack(Material.BOW);
 	          ABow.addUnsafeEnchantment(Enchantment.ARROW_INFINITE, 1);
 	          ItemStack Sword = new ItemStack(Material.WOOD_SWORD);
 	          Sword.addUnsafeEnchantment(Enchantment.KNOCKBACK, 3);
 	          player.sendMessage(ChatColor.YELLOW + "You have the " + ChatColor.BOLD + "Archer " + ChatColor.YELLOW + "kit!");
-	          this.kit.add(player.getName());
+	          SaesPvP.kit.add(player.getName());
 	          player.getInventory().clear();
 	          player.getInventory().addItem(new ItemStack[] { Sword });
 	          player.getInventory().addItem(new ItemStack[] { ABow });
@@ -48,4 +48,6 @@ public class Archer implements CommandExecutor{
 	return true;
 
 }
+	
+	
 }

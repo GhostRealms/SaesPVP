@@ -19,9 +19,9 @@ public class Default implements CommandExecutor {
 	    Player player = (Player)sender;
 	    if ((commandLabel.equalsIgnoreCase("default")) && ((sender instanceof Player))) {
 	      if (player.hasPermission("SaesPvP.Default")) {
-	        if (!this.kit.contains(player.getName())) {
+	        if (!SaesPvP.kit.contains(player.getName())) {
 	          player.sendMessage(ChatColor.YELLOW + "You chose the " + ChatColor.BOLD + "Default " + ChatColor.YELLOW + "kit!");
-	          this.kit.add(player.getName());
+	          SaesPvP.kit.add(player.getName());
 	          player.getInventory().clear();
 	          player.getInventory().addItem(new ItemStack[] { new ItemStack(Material.DIAMOND_SWORD) });
 	          player.getInventory().setHelmet(new ItemStack(Material.IRON_HELMET));
@@ -43,5 +43,10 @@ public class Default implements CommandExecutor {
 
 
 	}
+	
+
+	
 }
+          
+
 
