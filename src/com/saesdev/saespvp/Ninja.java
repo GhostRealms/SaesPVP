@@ -20,7 +20,7 @@ public class Ninja implements CommandExecutor {
     if ((commandLabel.equalsIgnoreCase("ninja")) && ((sender instanceof Player))) {
     	Player player = (Player)sender;
     
-	      if (player.hasPermission("SaesPvP.Ninja")) {
+	      if (player.hasPermission("SaesPvP.kit.Ninja")) {
 	    	  
 	    	  
 	      

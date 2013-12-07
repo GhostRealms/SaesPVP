@@ -19,7 +19,7 @@ public class Archer implements CommandExecutor{
     if ((commandLabel.equalsIgnoreCase("archer")) && ((sender instanceof Player))) {
     Player player = (Player)sender;	
     
-	      if (player.hasPermission("SaesPvP.Archer")) {
+	      if (player.hasPermission("SaesPvP.kit.Archer")) {
 	        if (!SaesPvP.kit.contains(player.getName())) {
 	          ItemStack ABow = new ItemStack(Material.BOW);
 	          ABow.addUnsafeEnchantment(Enchantment.ARROW_INFINITE, 1);

@@ -20,7 +20,7 @@ public class Pyro implements CommandExecutor {
 	    if ((commandLabel.equalsIgnoreCase("pyro")) && ((sender instanceof Player))) {
 	    	Player player = (Player)sender;
 	    
-		      if (player.hasPermission("SaesPvP.Pyro")) {
+		      if (player.hasPermission("SaesPvP.kit.Pyro")) {
 		    	  
 		    	  
 		      

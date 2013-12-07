@@ -20,7 +20,7 @@ public class Heavy implements CommandExecutor {
     if ((commandLabel.equalsIgnoreCase("heavy")) && ((sender instanceof Player))) {
     	Player player = (Player)sender;
     
-	      if (player.hasPermission("SaesPvP.Heavy")) {
+	      if (player.hasPermission("SaesPvP.kit.Heavy")) {
 	    	  
 	    	
 	      

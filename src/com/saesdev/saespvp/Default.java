@@ -18,7 +18,7 @@ public class Default implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 	    Player player = (Player)sender;
 	    if ((commandLabel.equalsIgnoreCase("default")) && ((sender instanceof Player))) {
-	      if (player.hasPermission("SaesPvP.Default")) {
+	      if (player.hasPermission("SaesPvP.kit.Default")) {
 	        if (!SaesPvP.kit.contains(player.getName())) {
 	          player.sendMessage(ChatColor.YELLOW + "You chose the " + ChatColor.BOLD + "Default " + ChatColor.YELLOW + "kit!");
 	          SaesPvP.kit.add(player.getName());

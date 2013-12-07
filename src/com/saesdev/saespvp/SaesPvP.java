@@ -15,6 +15,7 @@ import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import com.saesdev.saespvp.Archer;
@@ -30,17 +31,20 @@ public class SaesPvP extends JavaPlugin implements Listener {
 	
 	static ArrayList<String> kit = new ArrayList<String>();
 	
-	
 	public void onEnable() {
-System.out.println("[SaesPvP] Enabled");
-getCommand("reset").setExecutor(new Reset());
-getCommand("ninja").setExecutor(new Ninja());
-getCommand("default").setExecutor(new Default());
-getCommand("archer").setExecutor(new Archer());
-getCommand("heavy").setExecutor(new Heavy());
-getCommand("pyro").setExecutor(new Pyro());
+		System.out.println("[SaesPvP] Enabled");
+		this.saveDefaultConfig();
+		getCommand("reset").setExecutor(new Reset());
+		getCommand("ninja").setExecutor(new Ninja());
+		getCommand("default").setExecutor(new Default());
+		getCommand("archer").setExecutor(new Archer());
+		getCommand("heavy").setExecutor(new Heavy());
+		getCommand("pyro").setExecutor(new Pyro());
+		getCommand("kit").setExecutor(new kit(this));
 
-getServer().getPluginManager().registerEvents(this, this);
+		getServer().getPluginManager().registerEvents(this, this);
+		CustomKits ckits = new CustomKits(this);
+		
 	}
 
 	public void onDisable() {
