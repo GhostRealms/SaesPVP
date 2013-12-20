@@ -1,0 +1,8 @@
+settings:
+  name: SaesPvP
+listeners:
+  hunger-level: 16
+  hunger-enabled: true
+  death-message: false
+  join-message: false
+  quit-message: false
