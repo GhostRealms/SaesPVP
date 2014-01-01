@@ -17,6 +17,8 @@ public class Soup implements Listener{
 				int soup = 7;
 				player.setHealth(player.getHealth() + soup > player.getMaxHealth() ? player.getMaxHealth() : player.getHealth() + soup);
 				event.getPlayer().getInventory().getItemInHand().setType(Material.BOWL);
+			} else {
+				return;
 			}
 		}
 	}
